@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  </head>
+  <body style="font-family: Poppins" class="bg-gray-100">
+    <div class="px-10 my-10 flex flex-col justify-center">
+      <h1 class="text-3xl text-center mb-4 text-indigo-700">ToDo List</h1>
+      <div class="flex items-center justify-center">
+        <select
+          class="cursor-pointer pl-2 mr-4 w-30 h-10 rounded-md bg-indigo-500 text-white focus:outline-none"
+          name="filter-todo"
+          id="filterTodo"
+        >
+          <option value="all" selected>All</option>
+          <option value="active">Active</option>
+          <option value="completed">Completed</option>
+        </select>
+        <input
+          type="text"
+          class="rounded-md shadow h-10 px-2 focus:outline-none focus:border-2"
+          id="todo-input"
+        />
+        <button
+          id="add-button"
+          class="w-10 h-10 ml-4 rounded-md shadow bg-indigo-500 text-white"
+        >
+          +
+        </button>
+      </div>
+      <div id="todos" class="flex flex-col items-center m-4"></div>
+    </div>
+
+    <script src="./todo.js"></script>
+  </body>
+</html>
